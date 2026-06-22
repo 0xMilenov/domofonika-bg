@@ -5,7 +5,7 @@
   --muted: #c9d8df;
   --brand: #52c4e8;
   --brand-strong: #1196c9;
-  --shadow: rgba(0, 0, 0, 0.38);
+  --shadow: rgba(0, 0, 0, 0.72);
 }
 
 * {
@@ -29,17 +29,13 @@ body {
   display: grid;
   min-height: 100svh;
   overflow: hidden;
-  background:
-    linear-gradient(90deg, rgba(5, 13, 18, 0.88), rgba(5, 13, 18, 0.56) 50%, rgba(5, 13, 18, 0.42)),
-    url("assets/hero.jpg") center / cover no-repeat;
+  background: url("assets/hero.jpg") center / cover no-repeat;
 }
 
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(circle at 18% 26%, rgba(82, 196, 232, 0.22), transparent 32%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.54));
+  background: none;
   pointer-events: none;
 }
 
@@ -53,7 +49,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding: clamp(28px, 7vw, 80px);
-  text-shadow: 0 3px 18px var(--shadow);
+  text-shadow: 0 4px 22px var(--shadow), 0 1px 3px rgba(0, 0, 0, 0.72);
 }
 
 .hero__logo {
@@ -132,9 +128,7 @@ h1 {
 
 @media (max-width: 680px) {
   .hero {
-    background:
-      linear-gradient(180deg, rgba(5, 13, 18, 0.78), rgba(5, 13, 18, 0.84)),
-      url("assets/hero.jpg") center / cover no-repeat;
+    background: url("assets/hero.jpg") center / cover no-repeat;
   }
 
   .hero__content {
